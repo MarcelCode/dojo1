@@ -37,24 +37,24 @@ def move(start, move_string):
 
 
 # create window
-window = np.zeros((40, 20))
+window = np.zeros((20, 10))
 
 # goal
-window[9, 12] = 3
+window[1, 6] = 3
 
 # Start
-window[36, 10] = 2
+window[18, 5] = 2
 
 # blocks
-window[13, 10:15] = 1
-window[16, :11] = 1
-window[16, 14:] = 1
+window[3, 3:8] = 1
+window[5, :4] = 1
+window[5, 7:] = 1
 np.savetxt(r"C:\Users\Marcel\PycharmProjects\untitled5\session1\test.txt", window, fmt="%d")
 
 plt.imshow(window, cmap="seismic")
 # Robot movement
 start = [10, 36]
-movement_string = ["6_n_3", "1_e_3", "1_n_3", "1_e_3", "2_n_3", "1_w_3", "1_w_1", "1_ne_3"]
-move(start, movement_string)
+#movement_string = ["6_n_3", "1_e_3", "1_n_3", "1_e_3", "2_n_3", "1_w_3", "1_w_1", "1_ne_3"]
+#move(start, movement_string)
 
 plt.show()
